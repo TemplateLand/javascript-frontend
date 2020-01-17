@@ -4,16 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackManifestPlugin = require('webpack-manifest-plugin')
 
 module.exports = {
-  mode: 'development',
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[hash].js',
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    hot: true,
   },
   module: {
     rules: [
